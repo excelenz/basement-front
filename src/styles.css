@@ -89,8 +89,8 @@ li {
   color: slategray;
 }
 .paragraph {
-  font-size: 3.8rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 100;
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-align: center;
   color: slategray;
@@ -181,7 +181,7 @@ li {
 .card-title {
   font-family: "Expletus Sans";
   text-align: left;
-  font-size: 2.8rem;
+  font-size: 1.8rem;
 }
 .card-msg {
   font-family: "Raleway";

@@ -35,29 +35,8 @@ export default class Filter extends Component {
     list_data: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
-        first_name: PropTypes.string.isRequired,
-        last_name: PropTypes.string.isRequired,
-        email: PropTypes.string.isRequired,
-        country: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        avatar: PropTypes.string.isRequired
+        email: PropTypes.string.isRequired
       })
     ).isRequired
   };
 }
-
-// Filter.propTypes = {
-//   on_filter: PropTypes.func.isRequired,
-//   list_data: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       first_name: PropTypes.string.isRequired,
-//       last_name: PropTypes.string.isRequired,
-//       email: PropTypes.string.isRequired,
-//       country: PropTypes.string.isRequired,
-//       description: PropTypes.string.isRequired,
-//       avatar: PropTypes.string.isRequired
-//     })
-//   ).isRequired,
-//   items_num: PropTypes.number.isRequired
-// };
