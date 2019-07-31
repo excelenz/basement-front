@@ -51,7 +51,7 @@ li {
   min-width: 60rem;
 }
 .header {
-  background: lightsalmon;
+  background: #11b5c7;
   position: absolute;
   top: 0;
   left: 0;
@@ -163,7 +163,7 @@ li {
 .card:hover .thumb {
   box-shadow: 0 0.4rem 1.5rem DimGrey;
   margin-bottom: 3rem;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
 }
 .card:active {
   background: skyblue;
