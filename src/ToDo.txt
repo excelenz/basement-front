@@ -1,0 +1,26 @@
+1) Json pack
+2) Design
+3) Integration
+4) Output
+5) Input
+
+Безопасный доступ к Database:
+
+App --> Telegram --> Mydatabase -->
+
+App <-- Telegram <---
+    Json
+
+
+User preference allow to disable data or enable data
+
+People with crime case --> post to telegram by anonim pipe
+
+
+Scheme: Толоконский --> Городецкий --> прокурор
+
+
+Отправка запросов в Teleram bot
+получение ответов
+Отображение полученного json на сайте
+
