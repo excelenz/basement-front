@@ -18,8 +18,6 @@ export default class App extends Component {
   };
 
   render() {
-
-    if (!window.location.pathname.includes("profile")) {
         return (
           <div className="app">
             <Filter
@@ -33,13 +31,6 @@ export default class App extends Component {
             </div>
           </div>
         );
-    } else {
-        return (
-        <div className="app">
-            <Profile />
-        </div>
-        )
-    }
   }
 }
 
