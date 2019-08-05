@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Thumb from "./Thumb";
 
-const Card = ({ id,first_name,last_name, country, description, avatar,dateofbirth,birthplace,CurentId}) => {
+const Card = ({ id,first_name,last_name, country, description, avatar,dateofbirth,birthplace}) => {
   // console.log('first_name:',first_name)
    //console.log('props:',CurentId)
 
@@ -17,7 +17,7 @@ const Card = ({ id,first_name,last_name, country, description, avatar,dateofbirt
             {!birthplace ? "" : "birthplace: "+birthplace}
             {!dateofbirth ? "" : "birthdate: "+dateofbirth}
         </h1>
-        <p className="card-msg">{description} CurentId: {CurentId}</p>
+        <p className="card-msg">{description}</p>
       </div>
     </div>
   );

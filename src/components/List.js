@@ -1,16 +1,16 @@
 import React from "react";
 import Card from "./Card";
 import Profile from "./Profile";
-import { BrowserRouter as Router, Route,HashRouter,Link } from "react-router-dom";
+import { BrowserRouter as Router, Route,Link } from "react-router-dom";
 
 const List = ({ list_data }) => {
   return (
-      <Router>
-        <Route path="/profile/:itemsId"  component={Profile}/>
         <div className="cards-list">
-          <ul> {create_list_ui(list_data)} </ul>
+            <Router>
+              <Route path="/profile/:itemsId" />
+              <ul> {create_list_ui(list_data)} </ul>
+           </Router>
         </div>
-      </Router>
   );
 };
 
@@ -18,9 +18,10 @@ const List = ({ list_data }) => {
 const create_list_ui = items =>
   items.map(item => (
     <li key={item.id} className="card-item">
-           <Link to={{pathname:`profile/${item.id}`}}  params={{id: item.id }}>
+           <Link to={{pathname:`profile/${item.id}`}}  params={{avatar: item.avatar }}>
                 <Card {...item}/>
             </Link>
+
     </li>
   ));
 
