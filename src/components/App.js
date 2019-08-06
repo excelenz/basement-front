@@ -17,7 +17,7 @@ export default class App extends Component {
     });
   };
 
-    const App = () => {
+    render() {
 
             return (
               <div className="app">
@@ -29,8 +29,8 @@ export default class App extends Component {
                  <List list_data={this.state.filtered_list} />
                 </div>
               </div>
-            );
-      };
+            )
+    }
 }
 
 

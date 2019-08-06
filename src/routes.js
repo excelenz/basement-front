@@ -5,17 +5,16 @@ import App from "./components/App";
 import Profile from "./components/Profile";
 
 
-class routes extends Component {
-  render() {
-    return (
-      <Router>
-        <div>
-          <Route path='/' component={App} />
-          <Route path='/profile/:itemsId' component={Profile} />
-        </div>
-      </Router>
-    )
-  }
-}
+export default class routes extends Component {
 
-export default routes
+    render() {
+
+            return (
+                  <Router>
+                    <div>
+                      <Route path='/' component={App} />
+                    </div>
+                  </Router>
+            )
+    }
+}

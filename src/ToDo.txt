@@ -29,3 +29,9 @@ Scheme: Толоконский --> Городецкий --> прокурор
 
 https://tylermcginnis.com/react-router-philosophy-introduction/
 
+
+git rm --cached .idea/workspace.xml
+ ###  alias push="git add .;git commit -m 'ff'; git push origin master"
+
+
+   <Link to={{pathname:`profile/${item.id}`}}  params={{avatar: item.avatar }}>
