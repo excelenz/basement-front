@@ -17,21 +17,20 @@ export default class App extends Component {
     });
   };
 
-  render() {
-        return (
-          <div className="app">
-            <Filter
-              list_data={this.state.original_list}
-              on_filter={this.update_list_state}
-            />
-            <div className="content-box">
-              {/* Profile Goes Here...*/}
+    const App = () => {
 
-              <List list_data={this.state.filtered_list} />
-            </div>
-          </div>
-        );
-  }
+            return (
+              <div className="app">
+                <Filter
+                  list_data={this.state.original_list}
+                  on_filter={this.update_list_state}
+                />
+                  <div className="content-box">
+                 <List list_data={this.state.filtered_list} />
+                </div>
+              </div>
+            );
+      };
 }
 
 

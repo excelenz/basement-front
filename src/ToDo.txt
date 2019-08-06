@@ -1,3 +1,5 @@
+alias push="git add .;git commit -m 'ff'; git push origin master"
+
 1) Json pack
 2) Design
 3) Integration
@@ -23,4 +25,7 @@ Scheme: Толоконский --> Городецкий --> прокурор
 Отправка запросов в Teleram bot
 получение ответов
 Отображение полученного json на сайте
+
+
+https://tylermcginnis.com/react-router-philosophy-introduction/
 
