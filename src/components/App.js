@@ -5,18 +5,24 @@ import robots_data from "../db-data.json";
 import Profile from "./Profile";
 
 export default class App extends Component {
-  state = {
-    original_list: robots_data,
-    filtered_list: robots_data,
-    loaded_profile: 0
-  };
+    state = {
+        original_list: robots_data,
+        filtered_list: robots_data,
+        loaded_profile: false
+    };
 
-  update_list_state = filtered_list => {
-    this.setState({
-      filtered_list: filtered_list
-    });
-  };
+    update_list_state = filtered_list => {
+        this.setState({
+          filtered_list: filtered_list
+        });
+    };
 
+    componentDidMount () {
+    };
+
+    componentWillUnmount () {
+        this.loaded_profile = true;
+    };
     render() {
 
             return (

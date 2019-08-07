@@ -13,6 +13,7 @@ export default class routes extends Component {
                   <Router>
                     <div>
                       <Route path='/' component={App} />
+                       <Route path='/profile/:itemsId' component={Profile} />
                     </div>
                   </Router>
             )

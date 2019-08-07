@@ -6,10 +6,7 @@ import { BrowserRouter as Router, Route,Link } from "react-router-dom";
 const List = ({ list_data }) => {
   return (
         <div className="cards-list">
-            <Router>
-              <Route path='/profile/:itemsId' component={Profile} />
               <ul> {create_list_ui(list_data)} </ul>
-            </Router>
         </div>
   );
 };
