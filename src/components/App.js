@@ -18,15 +18,15 @@ export default class App extends Component {
     };
 
     componentDidMount () {
+        console.log("MOUNT");
     };
 
     componentWillUnmount () {
-        this.loaded_profile = true;
+        console.log("unMOUNT");
     };
     render() {
-
             return (
-              <div className="app">
+              <div className="app" id="container">
                 <Filter
                   list_data={this.state.original_list}
                   on_filter={this.update_list_state}

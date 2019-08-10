@@ -1,19 +1,26 @@
 import React, { Component } from "react";
 import Thumb from "./Thumb";
 import { Redirect } from 'react-router-dom'
+import ReactDOM from 'react-dom';
 
 
 
-const Profile = ({ id,first_name,last_name, country, description, avatar,dateofbirth,birthplace}) => {
-  return (
-    <div className="profile">
-      <Thumb image_url={avatar} />
-    </div>
-  );
-};
+export default class Profile extends Component {
+    state = {
 
-export default Profile;
+    };
 
-
+    componentDidMount () {
+        this.loaded_profile = true;
+        ReactDOM.unmountComponentAtNode(document.getElementById('container'))
+    };
 
 
+    render() {
+          return (
+            <div className="profile">
+                sfsddsd
+            </div>
+          );
+    }
+}
