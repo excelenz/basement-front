@@ -6,15 +6,10 @@ import ReactDOM from 'react-dom';
 
 
 export default class Profile extends Component {
-    state = {
-
-    };
 
     componentDidMount () {
-        this.loaded_profile = true;
-        ReactDOM.unmountComponentAtNode(document.getElementById('container'))
+        console.log("MOUNT Profile");
     };
-
 
     render() {
           return (

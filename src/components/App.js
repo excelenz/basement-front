@@ -8,7 +8,7 @@ export default class App extends Component {
     state = {
         original_list: robots_data,
         filtered_list: robots_data,
-        loaded_profile: false
+        loaded_profile: this.props.is_profile
     };
 
     update_list_state = filtered_list => {
@@ -24,18 +24,25 @@ export default class App extends Component {
     componentWillUnmount () {
         console.log("unMOUNT");
     };
+
     render() {
-            return (
-              <div className="app" id="container">
-                <Filter
-                  list_data={this.state.original_list}
-                  on_filter={this.update_list_state}
-                />
-                  <div className="content-box">
-                 <List list_data={this.state.filtered_list} />
-                </div>
-              </div>
-            )
+                return (
+                      <div className="app" id="container">
+                        {
+                            this.state.loaded_profile ? "":
+                            <div>
+                                 <Filter
+                                  list_data={this.state.original_list}
+                                  on_filter={this.update_list_state}
+                                />
+                                <div className="content-box">
+                                 <List list_data={this.state.filtered_list} />
+                                </div>
+                            </div>
+                        }
+                      </div>
+                )
+
     }
 }
 
