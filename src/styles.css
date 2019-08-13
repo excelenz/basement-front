@@ -11,21 +11,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: papayawhip;
+  background: #cccccc;
   background: -moz-linear-gradient(
     top,
-    #f5f5dc 0%,
-    #d2b48c 100%
+    #ffffff 0%,
+    #ffffff 100%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    #f5f5dc 0%,
-    #d2b48c 100%
+    #ffffff 0%,
+    #ffffff 100%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    #f5f5dc 0%,
-    #d2b48c 100%
+    #ffffff 0%,
+    #ffffff 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 * {
@@ -33,23 +33,34 @@ body {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  /*border:aqua dashed 3px; */
-  /*color:papayawhip*/
+
 }
 li {
   list-style-type: none;
 }
 /*--------------------*/
+
+#root {
+    width: 100%;
+}
+.left {
+    width:90%;
+}
 .app {
-  background: Cornsilk;
+  background: #ffffff;
   padding: 10.5rem 1.5rem 1.5rem;
   border-radius: 0.4rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0.4rem 1.5rem DimGrey;
+ /* box-shadow: 0 0.4rem 1.5rem DimGrey; */
   position: relative;
-  margin-top: 7rem;
-  min-width: 60rem;
+
+  min-width: 55rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: row-reverse;
 }
 .header {
   background: #11b5c7;
@@ -116,7 +127,7 @@ li {
   font-size: 3rem;
   font-weight: normal;
   font-family: "Griffy", cursive;
-  color: papayawhip;
+  color: #ffffff;
 }
 .logo {
   height: 5rem;
@@ -207,10 +218,15 @@ li {
   border-radius: 5px;
   display: flex;
 }
+.profile {
+    max-width: 50rem;
+    position: absolute;
+    top: 0;
+}
 .profile-box {
   padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
+
+
   padding-right: 15px;
   align-items: center;
   /*flex:1;*/

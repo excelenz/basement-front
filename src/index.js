@@ -5,5 +5,5 @@ import "./styles.css";
 import App from "./components/App";
 import Routes from "./routes";
 
-ReactDOM.render(<Routes />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
