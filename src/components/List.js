@@ -12,10 +12,11 @@ const List = ({ list_data }) => {
 };
 
 
+
 const create_list_ui = items =>
   items.map(item => (
     <li key={item.id} className="card-item">
-           <Link to={{pathname:`profile/${item.id}`}}  params={{avatar: item.avatar }}>
+           <Link to={{pathname:`profile/${item.id}`}}>
                 <Card {...item}/>
             </Link>
 

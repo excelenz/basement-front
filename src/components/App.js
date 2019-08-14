@@ -5,18 +5,20 @@ import { BrowserRouter as Router, Route,Link } from "react-router-dom";
 import Right from "./Right";
 
 export default class App extends Component {
-    state = {
 
-    };
+    constructor() {
+        super()
+        this.state = { loaded_profile :  false }
+    }
 
 
     render() {
             return (
                   <Router>
-                    <div class="main">
-                       <Route exact path='/' component={Right} />
-                       <div class='left'>
-                            <Route path='/profile/:itemsId' render= {()=>{return <Profile />;}}/>
+                    <div className="main">
+                       <Route exact path='/'  render= {(props)=>( <Right {...props} is_profile={this.state.loaded_profile}/>)}/>
+                       <div className="left">
+                            <Route path='/profile/:itemsId' component={Profile}/>
                        </div>
                     </div>
                   </Router>

@@ -10,6 +10,7 @@ export default class App extends Component {
         original_list: robots_data,
         filtered_list: robots_data,
         loaded_profile: this.props.is_profile
+
     };
 
     update_list_state = filtered_list => {
@@ -19,10 +20,9 @@ export default class App extends Component {
     };
 
 
-
     render() {
                 return (
-                          <div className="app" id="container">
+                          <div className="app {this.loaded_profile}" id="container">
                                 <div>
                                      <Filter
                                       list_data={this.state.original_list}

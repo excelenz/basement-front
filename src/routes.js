@@ -16,6 +16,7 @@ export default class routes extends Component {
         if (!this.state.loaded_profile) {
             this.setState({loaded_profile: true});
         }
+        alert(this.state.loaded_profile)
 
     }
 

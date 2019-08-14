@@ -7,14 +7,21 @@ import ReactDOM from 'react-dom';
 
 export default class Profile extends Component {
 
+    state = {
+        user: null
+    }
+
     componentDidMount () {
-        console.log("MOUNT Profile");
-    };
+        const { url } = this.props.match.params
+        console.log(this.props.match.params.itemsId)
+        console.log(this.props.match.url)
+    }
 
     render() {
+           console.log(this.props)
           return (
             <div className="profile">
-                sfsddsd
+                sfsddsd {this.props.match.url}
             </div>
           );
     }
