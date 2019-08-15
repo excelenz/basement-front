@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Thumb from "./Thumb";
 
 const Card = ({ id,first_name,last_name, country, description, avatar,dateofbirth,birthplace}) => {
-  // console.log('first_name:',first_name)
-   //console.log('props:',CurentId)
 
   return (
     <div className="card" >
