@@ -19,7 +19,7 @@ export default class App extends Component {
 
     render() {
                 return (
-                          <div className="app {this.loaded_profile}" id="container">
+                          <div className="app" id="container">
                                 <div>
                                      <Filter
                                       list_data={this.state.original_list}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Expletus+Sans|Raleway|Griffy|Yanone+Kaffeesatz:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Raleway|Griffy|Open+Sans:400,700");
 
 html,
 body {
@@ -44,7 +44,17 @@ li {
     width: 100%;
 }
 .left {
-    width:90%;
+    position: absolute;
+    width: 75%;
+    left: 0;
+    top:0;
+}
+
+.right {
+    position: absolute;
+    width: 25%;
+    right: 25%;
+    top:0;
 }
 .app {
   background: #ffffff;
@@ -63,7 +73,7 @@ li {
   flex-direction: row-reverse;
 }
 .header {
-  background: #11b5c7;
+  background: #d8dcdc;
   position: absolute;
   top: 0;
   left: 0;
@@ -87,11 +97,11 @@ li {
   border: tomato 2px solid;
 }
 .filter_title {
-  font-family: "Expletus Sans";
+  font-family: "Roboto";
   text-align: left;
   font-size: 2rem;
   font-weight: 400;
-  color: darkred;
+  color: #7b7b7b;
 }
 .headline {
   font-size: 5rem;
@@ -103,7 +113,7 @@ li {
 .paragraph {
   font-size: 1.8rem;
   font-weight: 100;
-  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   color: slategray;
 }
@@ -143,14 +153,14 @@ li {
 }
 .list-title {
   padding: 1.4rem;
-  font-family: "Expletus Sans";
+  font-family: "Roboto";
   font-size: 3.2rem;
   font-weight: 400;
   text-align: center;
   color: slategray;
 }
 .cards-list {
-  background: oldlace;
+  background: #eaeaea;
   height: 75vh;
   border-radius: 0.4rem;
   overflow-x: hidden;
@@ -158,10 +168,10 @@ li {
   box-shadow: 0 0.2rem 0.8rem DimGrey;
 }
 .card-item:nth-child(even) {
-  background: honeydew;
+  background: #e3f4fd;
 }
 .card-item:nth-child(odd) {
-  background: white;
+  background: #f5f9fb;
 }
 .card {
   padding: 2rem 2.8rem;
@@ -170,11 +180,11 @@ li {
   align-items: center;
 }
 .card:hover {
-  background: paleturquoise;
+  background: #ffffff;
 }
 .card:hover .thumb {
   box-shadow: 0 0.4rem 1.5rem DimGrey;
-  margin-bottom: 3rem;
+
   /* padding-bottom: 1rem; */
 }
 .card:active {
@@ -192,7 +202,7 @@ li {
   text-decoration: none;
 }
 .card-title {
-  font-family: "Expletus Sans";
+  font-family: "Roboto";
   text-align: left;
   font-size: 1.8rem;
   text-decoration: none;
@@ -223,6 +233,20 @@ li {
     position: absolute;
     top: 0;
 }
+
+.self-profile {
+    padding: 1rem;
+    width: 65%;
+
+}
+.self-profile-paragraph {
+    background: #fefefe;
+    font-family: "Roboto";
+}
+
+.self-profile  .thumb-box {
+    margin: 3rem 0 2rem 3rem;
+}
 .profile-box {
   padding: 1.5rem;
 
@@ -248,7 +272,7 @@ li {
 }
 .profile-image-box {
   /*flex:1;*/
-  background: peachpuff;
+  background: #666666;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,7 +285,7 @@ li {
 }
 .profile-details-box {
   padding: 10px;
-  font-family: "Expletus Sans";
+  font-family: "Roboto";
   text-align: left;
   color: slategray;
   font-weight: 400;

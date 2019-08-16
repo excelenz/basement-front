@@ -2,7 +2,8 @@ import React from "react";
 import Card from "./Card";
 import { BrowserRouter as Router, Route,Link } from "react-router-dom";
 
-const List = ({ list_data,url_location }) => {
+const List = ({list_data,url_location }) => {
+
   {if (url_location.pathname.includes("profile")) {var  path=""} else {var path="profile/"} }
 
   return (

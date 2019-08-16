@@ -24,7 +24,7 @@ export default class Filter extends Component {
   render() {
     return (
       <div className="header">
-        <h4 className="filter_title">{this.num_elements} items filtered</h4>
+        <h4 className="filter_title">{this.num_elements} результата</h4>
         <input className="filter" onChange={this.update_list} />
       </div>
     );

@@ -8,12 +8,12 @@ const Card = ({ id,first_name,last_name, country, description, avatar,dateofbirt
         <Thumb image_url={avatar} />
       <div className="texts-box">
         <h1 className="card-title paragraph">
-            {!first_name ? "" : "first name: "+first_name} {!last_name ? "" : "last name "+last_name}
+            {!first_name ? "" : "Имя: "+first_name} {!last_name ? "" : "Фамилия "+last_name}
             <br />
-            country: {country}
+            страна: {country}
             <br />
-            {!birthplace ? "" : "birthplace: "+birthplace}
-            {!dateofbirth ? "" : "birthdate: "+dateofbirth}
+            {!birthplace ? "" : "место рождения: "+birthplace}
+            {!dateofbirth ? "" : "дата рождения: "+dateofbirth}
         </h1>
         <p className="card-msg">{description}</p>
       </div>
