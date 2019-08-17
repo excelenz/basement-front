@@ -35,3 +35,11 @@ git rm --cached .idea/workspace.xml
 
 
    <Link to={{pathname:`profile/${item.id}`}}  params={{avatar: item.avatar }}>
+
+сайт преступлений режима
+поиск по тагам -> дата проступка
+таги основных событий
+место/регион/служба
+
+
+http://qaru.site/questions/2321169/react-dynamically-add-input-fields-to-form
