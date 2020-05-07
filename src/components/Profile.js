@@ -59,7 +59,7 @@ export default class Profile extends Component {
                               </div>
                         </div>
                     </div>
-                    <button onClick={this.addQuestion}>add new block</button>
+                    <button onClick={this.addQuestion} ><img style={{width:"15px"}} src={'../'+process.env.PUBLIC_URL +'img/edit_button.png'} /> add new block</button>
                  </div>
           );
     }
