@@ -1,0 +1,6 @@
+{
+  "scripts": {
+  "dev": "graphpack",
+  "build": "graphpack build"
+  }
+}
