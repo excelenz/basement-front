@@ -1,6 +1,9 @@
 {
   "scripts": {
-  "dev": "graphpack",
-  "build": "graphpack build"
+    "dev": "graphpack",
+    "build": "graphpack build"
+  },
+  "devDependencies": {
+    "graphpack": "^1.0.9"
   }
 }
