@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "dev": "graphpack",
+    "build": "graphpack build"
+  }
 }
