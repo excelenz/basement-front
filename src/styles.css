@@ -169,19 +169,22 @@ li {
   box-shadow: 0 0.2rem 0.8rem DimGrey;
 }
 .card-item:nth-child(even) {
-  background: #e3f4fd;
+  background: #ffffff;
 }
 .card-item:nth-child(odd) {
-  background: #f5f9fb;
+  background: #ffffff;
 }
 .card {
   padding: 2rem 2.8rem;
   cursor: pointer;
   display: flex;
   align-items: center;
+  box-shadow: 0 0  0.2rem DimGrey;
+
 }
 .card:hover {
   background: #ffffff;
+  box-shadow: 0 0.3rem 1.0rem DimGrey;
 }
 .card:hover .thumb {
   box-shadow: 0 0.4rem 1.5rem DimGrey;

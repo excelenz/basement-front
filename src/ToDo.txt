@@ -43,3 +43,9 @@ git rm --cached .idea/workspace.xml
 
 
 http://qaru.site/questions/2321169/react-dynamically-add-input-fields-to-form
+
+npm install @material-ui/core
+npm install @material-ui/icons
+
+netstat -ano | findstr :3000
+tskill typeyourPIDhere
