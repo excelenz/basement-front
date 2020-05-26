@@ -428,16 +428,14 @@ class App extends React.Component {
 
   componentWillMount() {
     var self = this
-    fetch('http://localhost:3000/db_data/db-data.json')
-    //fetch('http://localhost:5000/api/Org')
+    fetch('http://localhost:5000/api/Org')
     .then(function(response) {
       return response.json();
     })
     .then(function(myJson) {
       self.setOrg(myJson)
     });
-    //fetch('http://localhost:5000/api/Entry')
-    fetch('../db_data/db-data.json')
+    fetch('http://localhost:5000/api/Entry')
     .then(function(response) {
       return response.json();
     })
