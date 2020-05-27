@@ -32,3 +32,10 @@
     transform: rotate(360deg);
   }
 }
+
+.MuiAvatar-root-new{
+    width: 60px!important;
+    height: 60px!important;
+    margin-right: 15px!important;
+
+}
