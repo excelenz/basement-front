@@ -100,8 +100,7 @@ class SimpleMenu extends React.Component {
       <div>
           <IconButton color="inherit" aria-label="Open drawer" aria-owns={anchorEl ? 'simple-menu' : undefined}
           aria-haspopup="true"
-          onClick={this.handleClick}
->
+          onClick={this.handleClick}>
             <MenuIcon />
           </IconButton>
         <Menu
@@ -687,7 +686,7 @@ class App extends React.Component {
           <Paper square className={classes.paper}>
           <AppBar position="static" color="default">
         <Toolbar>
-         dsadasd
+          <img src={ require('./addressio.png') } />
         </Toolbar>
       </AppBar>
 
