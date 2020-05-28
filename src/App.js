@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { notEqual } from 'assert';
+import Filter from "./components/Filter";
 
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -686,6 +687,11 @@ class App extends React.Component {
           <Paper square className={classes.paper}>
           <AppBar position="static" color="default">
         <Toolbar>
+            {/*   <Filter
+               list_data={this.state.original_list}
+              on_filter={this.update_list_state}
+               />
+             */}
           <img src={ require('./addressio.png') } />
         </Toolbar>
       </AppBar>
