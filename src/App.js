@@ -314,10 +314,11 @@ class PersonContact extends React.Component {
   }
 
   renderDisplay() {
+    let MuiAvatarnew='MuiAvatar-root-new';
     return (
       <div>
               <ListItem divider>
-                <Avatar alt="Profile Picture" src={this.props.pic} />
+                <Avatar alt="Profile Picture" className={MuiAvatarnew} src={this.props.pic} />
                 <ListItemText primary={
                 <div>{this.props.name}<i>{this.getOrgName(this.props.org_id)}</i></div>
               }
