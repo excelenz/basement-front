@@ -408,7 +408,8 @@ class App extends React.Component {
       pplView: true,
       orgs: [],
       people: [],
-
+      original_list: this.people,
+      filtered_list:  this.people,
     }
     this.addPerson = this.addPerson.bind(this)
     this.updatePerson = this.updatePerson.bind(this)
@@ -676,6 +677,12 @@ class App extends React.Component {
     }))
   }
 
+  update_list_state = filtered_list => {
+      this.setState({
+        filtered_list: filtered_list
+      });
+  };
+
   render() {
 
     const { classes } = this.props;
@@ -687,11 +694,10 @@ class App extends React.Component {
           <Paper square className={classes.paper}>
           <AppBar position="static" color="default">
         <Toolbar>
-            {/*   <Filter
-               list_data={this.state.original_list}
-              on_filter={this.update_list_state}
+               <Filter
+                  list_data={this.state.original_list}
+                  on_filter={this.update_list_state}
                />
-             */}
           <img src={ require('./addressio.png') } />
         </Toolbar>
       </AppBar>

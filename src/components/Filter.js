@@ -6,7 +6,7 @@ export default class Filter extends Component {
 
   constructor(props) {
     super(props);
-    this.num_elements = props.list_data.length;
+
 
     // this.update_list = this.update_list.bind(this);
     // this.update_list = () => this.update_list();
