@@ -3,10 +3,8 @@ from marshmallow import Schema, fields, pre_load, validate
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 
-
 ma = Marshmallow()
 db = SQLAlchemy()
-
 
 class telegram(db.Model):
     __tablename__ = 'telegram_messages'

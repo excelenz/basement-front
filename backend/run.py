@@ -1,13 +1,14 @@
 from flask import Flask,jsonify
 from flask_cors import CORS
 import json, os, signal
+import migrate
 
-app = Flask(__name__)
+app=Flask(__name__)
 
 def create_app(config_filename):
 
     app.config.from_object(config_filename)
-    
+
     from app import api_bp
     app.register_blueprint(api_bp, url_prefix='/api')
 
