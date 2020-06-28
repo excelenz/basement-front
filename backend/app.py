@@ -3,6 +3,7 @@ from flask_restful import Api
 from resources.Entry import EntryResource
 from resources.Organisation import OrganisationResource
 from resources.Hello import Hello
+from resources.JsonTelegram import JsonTelegramResource
 
 
 api_bp = Blueprint('api', __name__)
@@ -13,3 +14,4 @@ api = Api(api_bp)
 api.add_resource(EntryResource, '/Entry')
 api.add_resource(OrganisationResource, '/Org')
 api.add_resource(Hello, '/Hello')
+api.add_resource(JsonTelegramResource, '/Json')

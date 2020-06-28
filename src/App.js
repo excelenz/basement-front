@@ -305,7 +305,7 @@ class PersonContact extends React.Component {
   getOrgName(id) {
     var y = this.props.orgs.find(x => x.id === id);
     console.log(y)
-    if (id == 0 || y.id == undefined) {
+    if (id == 0 || (y != undefined && y.id == undefined)) {
       return "";
     }
     else {
