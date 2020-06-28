@@ -19,6 +19,17 @@ class telegram(db.Model):
     date = db.Column(db.DateTime)
     text = db.Column(db.String(300))
 
+    def __init__(self, message_id, chat_id, chat_title, user_id, first_name,username,date,text):
+        self.message_id = message_id
+        self.chat_id = chat_id
+        self.chat_title = chat_title
+        self.user_id = user_id
+        self.first_name = first_name
+        self.username = username
+        self.date = date
+        self.text = text
+
+
 
 class Entry(db.Model):
     __tablename__ = 'entries'
