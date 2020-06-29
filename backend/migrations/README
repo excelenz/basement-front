@@ -1,1 +1,17 @@
 Generic single-database configuration.
+
+***********
+COMMANDS
+************
+
+
+python migrate.py db migrate
+
+ps aux
+kill -9 pid
+
+
+python migrate.py db stamp head
+python migrate.py db migrate
+python migrate.py db upgrade
+
