@@ -9,7 +9,7 @@ class JsonTelegramResource(Resource):
     def get(self):
         entries = telegram.query.all()
         entries = entries_schema.dump(entries).data
-        return {'status': 'success', 'data': 1}, 200
+        return {'status': 'success', 'data': entries}, 200
 
     def post(self):
         json_data = request.get_json(force=True)
