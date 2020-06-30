@@ -1,15 +1,15 @@
 from flask import request
 from flask_restful import Resource
-from Model import db, telegram, telegramSchema
+from Model import db, herolo, heroloSchema
 import datetime
 
-entries_schema = telegramSchema(many=True)
-entry_schema = telegramSchema()
+entries_schema = heroloSchema(many=True)
+entry_schema = heroloSchema()
 
-class JsonTelegramResource(Resource):
+class HeroloResource(Resource):
 
     def get(self):
-        entries = telegram.query.all()
+        entries = herolo.query.all()
         entries = entries_schema.dump(entries).data
         return {'status': 'success', 'data': entries}, 200
 
@@ -21,17 +21,20 @@ class JsonTelegramResource(Resource):
         data, errors = entry_schema.load(json_data)
         if errors:
             return errors, 422
-        entry = telegram.query.filter_by(message_id=data['message_id']).first()
+        entry = herolo.query.filter_by(message_id=data['message_id']).first()
         if entry:
             return {'message': 'Entry already exists'}, 400
-        entry = telegram(
+        entry = herolo(
             message_id=json_data['message_id'],
-            chat_id=json_data['chat_id'],
+
+            sender_id=json_data['chat_id'],
+
+
             chat_title=json_data['chat_title'],
             user_id=json_data['user_id'],
             first_name=json_data['first_name'],
             username =json_data['username'],
-            date = datetime.datetime.strptime(json_data['date'], '%Y-%m-%d %H:%M:%S'),
+            date=datetime.datetime.now(),
             text=json_data['text']
             )
 
@@ -49,7 +52,7 @@ class JsonTelegramResource(Resource):
         data, errors = entry_schema.load(json_data)
         if errors:
             return errors, 422
-        entry = telegram.query.filter_by(id=data['id']).first()
+        entry = herolo.query.filter_by(id=data['id']).first()
         if not entry:
             return {'message': 'Entry does not exist'}, 400
         entry.message_id = data['message_id']
