@@ -7,11 +7,11 @@ import datetime
 ma = Marshmallow()
 db = SQLAlchemy()
 
-class herolo(db.Model):
+class Herolo(db.Model):
     __tablename__ = 'herolo_messages'
     message_id = db.Column(db.Integer, primary_key=True)
-    sender_id = db.Column(db.Integer)
-    reciever_id = db.Column(db.Integer)
+    sender_id =  db.Column(db.Integer, db.ForeignKey('id'))
+    reciever_id = db.Column(db.Integer, db.ForeignKey('id'))
     message =  db.Column(db.String(300))
     subject =  db.Column(db.String(300))
     date = db.Column(db.DateTime)
@@ -20,9 +20,18 @@ class herolo(db.Model):
         self.message_id = message_id
         self.sender_id = sender_id
         self.reciever_id = reciever_id
-        self.message = subject
+        self.message = message
+        self.subject = subject
         self.date = datetime.datetime.now()
 
+class Herolousers(db.Model):
+    __tablename__ = 'herolo_users'
+    id = db.relationship('herolo')
+    name = db.Column(db.String(50), index=True)
+
+    def __init__(self, id, name):
+        self.id=id
+        self.name=name
 
 class telegram(db.Model):
     __tablename__ = 'telegram_messages'
@@ -104,12 +113,15 @@ class telegramSchema(ma.Schema):
     text = fields.String()
 
 
-class heroloSchema(ma.Schema):
+class HeroloSchema(ma.Schema):
     message_id =  fields.Integer()
-    chat_id =  fields.Integer()
-    chat_title = fields.String()
-    user_id =  fields.Integer()
-    first_name = fields.String()
-    username =  fields.String()
-    date =  fields.DateTime()
-    text = fields.String()
+    sender_id =  fields.Integer()
+    reciever_id = fields.Integer()
+    message =  fields.String()
+    subject = fields.String()
+    date = fields.DateTime()
+
+
+class HerolousersSchema(ma.Schema):
+    id = fields.Integer()
+    name = fields.String()

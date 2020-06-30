@@ -1,15 +1,15 @@
 from flask import request
 from flask_restful import Resource
-from Model import db, herolo, heroloSchema
+from Model import db, Herolo,Herolousers, HeroloSchema, HerolousersSchema
 import datetime
 
-entries_schema = heroloSchema(many=True)
-entry_schema = heroloSchema()
+entries_schema = HeroloSchema(many=True)
+entry_schema = HeroloSchema()
 
 class HeroloResource(Resource):
 
     def get(self):
-        entries = herolo.query.all()
+        entries = Herolo.query.all()
         entries = entries_schema.dump(entries).data
         return {'status': 'success', 'data': entries}, 200
 
@@ -21,21 +21,15 @@ class HeroloResource(Resource):
         data, errors = entry_schema.load(json_data)
         if errors:
             return errors, 422
-        entry = herolo.query.filter_by(message_id=data['message_id']).first()
+        entry = Herolo.query.filter_by(message_id=data['message_id']).first()
         if entry:
             return {'message': 'Entry already exists'}, 400
-        entry = herolo(
+        entry = Herolo(
             message_id=json_data['message_id'],
-
-            sender_id=json_data['chat_id'],
-
-
-            chat_title=json_data['chat_title'],
-            user_id=json_data['user_id'],
-            first_name=json_data['first_name'],
-            username =json_data['username'],
-            date=datetime.datetime.now(),
-            text=json_data['text']
+            sender_id=json_data['sender_id'],
+            reciever_id=json_data['reciever_id'],
+            message=json_data['message'],
+            subject=json_data['subject']
             )
 
         db.session.add(entry)
@@ -52,7 +46,7 @@ class HeroloResource(Resource):
         data, errors = entry_schema.load(json_data)
         if errors:
             return errors, 422
-        entry = herolo.query.filter_by(id=data['id']).first()
+        entry = Herolo.query.filter_by(id=data['id']).first()
         if not entry:
             return {'message': 'Entry does not exist'}, 400
         entry.message_id = data['message_id']
